@@ -1,0 +1,38 @@
+Kotlinde Fonsiyonlar Fun Methodu İle Başlar OOP uyumludur neden diyecek olursak yazdığımız bir fonsiyon,Herkese açık bir halde ise projenin her alanında kullanabiliriz. Değilsede alıp başka bir projemizde isimler birimler değiştirilerek kullanılabilecektir.
+
+Fun Method’u İle Başladıktan sonra fonksiyonumuza vereceğimiz ismi yazmamız gerekecektir,isim verdikten sonra: val,var değişken belirtme durumlarımızı belirtiriz val değişime açık olmayan tek değer olan anlamı taşır ancak var birden fazla değer olarak kullanılıcaktır. Fonsiyon içersinde yazdığımız değeri işlem kelime vb. eğer uygulama çalıştığında görmek istiyorsak değer değişkenimizi “FindViewById<>ye eşitlememiz gerekecektir.arada bulunan yönlü parantezimizin içersinde mainActivity deki textview button ve benzeri yazdırmak istediğimiz alanı belirtiriz. Sonrasında <>R.id.textview şeklinde yazarız sonra,verdiğimiz ismi hemen altında çağırırız: .text= eğer değerlerimiz sayısal işlemse${} şeklinde “” içerisnde yazarız eğer string bir ifade ise direk “” içersinde yazmamız yeterli olacaktır.Sonrasında kullanacağımız alanda fonksiyonumuz çağrılır.
+
+Örn:AppCompactActivity altında.
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        test()
+        mysum(1,5)
+        mysum(40,35)
+        mysum(10,20)
+        mydeneme(10,15)
+    }
+    //1.Fonksiynlar bizim için kod blokları oluştururlar reusable)İnput parametre alabilir.-output-return
+//input ala altta yazdığımı fonsiyonu üstte çağırmadır.
+    //Bu kısımda mysum fun yazdığımızda bize unit diye yazı çıkar oda geriye birşey döndürmedir.
+//Şimdi geliypruz output çıktı verme
+
+    fun test(){
+        println("Deneme Bir İki Üç")
+    }
+    fun mysum(a:Int,b:Int){
+
+       val myTextView=findViewById<TextView>(R.id.textView,)
+        myTextView.text="Result: ${a+b}"
+     }
+    fun mydeneme(x:Int,y:Int){
+//Veri Tek Olursa çalışır ama döngüde çalışmaz
+        //Print x*y
+        val meytext=findViewById<Button>(R.id.button)
+        meytext.text="${x+y}" //Çalışmaz
+
+    }
+}
+//Fonksiyon içersindeki parametreler sadece kendilerini ilgilendirir.
+//Fonsiyoında eğer rerturn veri dönüşümü yapacaksak bunu Miras ile dönüş tipini vermemiz gerekir.    
