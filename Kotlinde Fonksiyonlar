@@ -1,6 +1,15 @@
-Kotlinde Fonsiyonlar Fun Methodu İle Başlar OOP uyumludur neden diyecek olursak yazdığımız bir fonsiyon,Herkese açık bir halde ise projenin her alanında kullanabiliriz. Değilsede alıp başka bir projemizde isimler birimler değiştirilerek kullanılabilecektir.
+Kotlinde Fonsiyonlar Fun Methodu İle Başlar OOP uyumludur neden diyecek olursak yazdığımız bir fonsiyon,Herkese açık bir halde ise projenin her alanında kullanabiliriz.
+Değilsede alıp başka bir projemizde isimler birimler değiştirilerek kullanılabilecektir.
 
-Fun Method’u İle Başladıktan sonra fonksiyonumuza vereceğimiz ismi yazmamız gerekecektir,isim verdikten sonra: val,var değişken belirtme durumlarımızı belirtiriz val değişime açık olmayan tek değer olan anlamı taşır ancak var birden fazla değer olarak kullanılıcaktır. Fonsiyon içersinde yazdığımız değeri işlem kelime vb. eğer uygulama çalıştığında görmek istiyorsak değer değişkenimizi “FindViewById<>ye eşitlememiz gerekecektir.arada bulunan yönlü parantezimizin içersinde mainActivity deki textview button ve benzeri yazdırmak istediğimiz alanı belirtiriz. Sonrasında <>R.id.textview şeklinde yazarız sonra,verdiğimiz ismi hemen altında çağırırız: .text= eğer değerlerimiz sayısal işlemse${} şeklinde “” içerisnde yazarız eğer string bir ifade ise direk “” içersinde yazmamız yeterli olacaktır.Sonrasında kullanacağımız alanda fonksiyonumuz çağrılır.
+Fun Method’u İle Başladıktan sonra fonksiyonumuza vereceğimiz ismi yazmamız gerekecektir,isim verdikten sonra: 
+val,var değişken belirtme durumlarımızı belirtiriz val değişime açık olmayan tek değer olan anlamı taşır ancak var birden fazla değer olarak kullanılıcaktır. 
+Fonsiyon içersinde yazdığımız değeri işlem kelime vb. 
+eğer uygulama çalıştığında görmek istiyorsak değer değişkenimizi “FindViewById<>ye eşitlememiz gerekecektir.
+Arada bulunan yönlü parantezimizin içersinde mainActivity deki textview button ve benzeri yazdırmak istediğimiz alanı belirtiriz. 
+Sonrasında <>R.id.textview şeklinde yazarız sonra,verdiğimiz ismi hemen altında çağırırız: .text= eğer değerlerimiz sayısal işlemse${} şeklinde değilse string'se
+“” içerisnde yazarız eğer string bir ifade ise direk “” 
+içersinde yazmamız yeterli olacaktır.Sonrasında kullanacağımız alanda fonksiyonumuz çağrılır.
+Aşığıda Örnekleme Mevcuttur.
 
 Örn:AppCompactActivity altında.
 class MainActivity : AppCompatActivity() {
